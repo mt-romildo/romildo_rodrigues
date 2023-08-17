@@ -6,9 +6,9 @@
 /* Impostasão font Montserrat*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat=swap');
 @font-face{
-    font-family: "Game Of Squids";
-    src: url("/rr.fonts/Game-Of-Squids.woff") format('woff'),
-         url("/rr.fonts/Game-Of-Squids.otf") format('opentype');
+    font-family: "Potra";
+    src: url("/rr.fonts/Potra.woff") format('Potra'),
+         url("/rr.fonts/Potra.otf") format('Potra');
 }
 
 body{
@@ -16,24 +16,37 @@ body{
     font-family: Montserrat;
     color: white;
     width: 100vw;
-height: 100vh;
+    height: 100vh;
+
     
 }
 
+.menu{
+    width: 100%;
+    height: 60px;
+    background: #00DBF9FF;
+}
+
+.logo-menu{
+    background-image: url("/rr.imagens/logo.svg") ;
+    background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  background-size: cover;
+}
 .background-ponto{
     background-image: url("/rr.imagens/background-image.png");
 }
 
 .container{
-
- border:  solid 1px white;
-
-
+    margin-left: 10%;
+    border:  solid 1px white;
+    width: 80%;
 }
 
 .container-tela{
-width: 100vw;
-height: 100vh;
+    width: 100vw;
+    height: 100vh;
 }
 
 /* ---------------------------- Gradient texto ---------------------------- */
@@ -41,9 +54,14 @@ h1, h3{
     background: linear-gradient( 90deg, #00DBF9FF , #0951FDFF);
     -webkit-background-clip: text;
     color: transparent;
-    font-family: Game Of Squids;
+    font-family: Potra;
 
 }
+
+h3{
+    font-size: 3rem;
+}
+
 .saudacao{
     display: grid;
     place-content: center;
