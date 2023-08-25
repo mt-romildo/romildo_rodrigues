@@ -3,16 +3,12 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    font-family: 'Montserrat', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat=swap');
-/*
-@font-face{
-    font-family: "Potra";
-    src: url("/rr.fonts/Potra.woff") format('Potra'),
-         url("/rr.fonts/Potra.otf") format('Potra');
-}*/
+/* ---------------- Importante ---------------- */
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:display=swap');
+
 
 :root{
     --backgroud-degrade: #00DBF9FF , #0951FDFF;
@@ -20,26 +16,44 @@
 
 
 body{
-    background-color: #1A1122FF;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     color: white;
     width: 100vw;
     height: 100vh;
-
-    
+    background-color: #19191A;    
 }
 
+.container{
+    margin-left: 10%;
+    width: 80%;
+    height: 100%;
+}
+
+.container-tela{
+    width: 100vw;
+    height: 100vh;
+}
+
+.container-tela-flex{
+    width: 100vw;
+    min-height: 100vh;
+}
+
+
+
+/* ------------------------------ Menu ---------------------------- */
 header{
-    background-color: #1A1122FF;
+    background-color: #19191A;
 }
+
 .menu{
     width: 100%;
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
 }
-
 
 .item-menu a{
     padding: 0.3rem 1.3rem;
@@ -47,28 +61,22 @@ header{
 }
 
 .item-menu a:hover{
-    border-bottom: solid 3px #0951FDFF;
-    border-radius: 5px;
-    border: solid 2px #0951FDFF;;
-    background-position: 5%;
-    
+    border-bottom: solid 3px #0951FDFF;    
 }
 
 
 .logo-menu img{
-    width: 50px;
+    width: 70px;
     height: auto;
-
 }
 
-.background-ponto{
-    background-image: url("rr.imagens/background-image.png");
-}
 
+/* ---------------- Header - Saudação, Pimeira tela ---------------- */
 .container-eu{
     display: flex;
     flex-direction: row;
     height: 100%;
+    z-index: -5;
 
 }
 
@@ -86,17 +94,17 @@ header{
 .saudacao h2{
     padding-top: 10px;
     padding-bottom: 100px;
-    font-size: 16px;
-    letter-spacing: 3px;
+    font-weight: 300;
+    font-size: 21px;
+    letter-spacing: 5px;
 }
 
 .saudacao p:nth-child(2n +1){
-    color: #00DBF9FF;
-    font-size: 55px;
+    font-size: 68px;
 }
 
 .saudacao p:nth-child(2n +2){
-    font-size: 26px;
+    font-size: 32px;
 }
 
 .saudacao h2{
@@ -104,20 +112,22 @@ header{
     letter-spacing: 3px;
 }
 
-.button{
-    padding: 8px 70px;
-    border-radius: 50px;
+/* ----------------  Bontão ---------------- */
+.button {
+    text-decoration: none;
+    padding: 10px 60px;
+    border-radius: 10px;
+    border: 3px solid #0951FDFF;
     font-size: 21px;
-    letter-spacing: 3px;
-    background: linear-gradient(90deg, var(--backgroud-degrade));
-    color: #fff;
+    letter-spacing: 1px;
+    background: #fff;
+    color: #0951FDFF;
 }
 
 .button:hover{
-    outline: 2px solid #00DBF9FF;
-    outline-offset: 3px;
-    color: #00DBF9FF;
-    background: #fff;
+    border: none;
+    color: #fff;
+    background: linear-gradient( 90deg, var(--backgroud-degrade));
 }
 
 .border-gradient {
@@ -129,19 +139,17 @@ header{
 .capa{
     width: 50%;
     height: 100%;
- 
-}
-.foto-capa{
-    height: 100%;
     display: flex;
-    align-self: flex-end;
-    
 }
 
-figure{
+.foto-capa{
+    height: 70%;
+    width: auto;
     display: flex;
-    align-items: flex-end;
+    margin-inline-end: 3%;
+    align-items: center;
     justify-content: flex-end;
+    
 }
 
 .foto-capa figcaption{
@@ -151,98 +159,173 @@ figure{
 .foto-capa img{
     width: 100%;
     height: auto;
-}
-
-.container{
-    margin-left: 10%;
-    width: 80%;
-    height: 100%;
-}
-
-.container-tela{
-    width: 100vw;
-    height: 100vh;
+    z-index: -1;
 }
 
 /* ---------------------------- Gradient texto ---------------------------- */
 h1{
-    font-size:5rem ;
-}
-h1, h3{
+    font-size: 5.4rem;
+    margin-left: -8px;
+    font-weight: 400;
     background: linear-gradient( 90deg, var(--backgroud-degrade));
     -webkit-background-clip: text;
     color: transparent;
-}
-
-h3{
-    font-size: 3rem;
-}
-
-.sobre{
-    background-color: #282A3AFF;
-}
-
-.projetos{
-}
-
-.habilidades{
-        background-color: #282A3AFF;
-
-}
-
-.container-habilidade{
-    width: 100%;
-    height: 80%;
-    display: flex;
-    place-content: center;
-    align-items: center;
-    justify-content: space-between;
     
 }
 
-.habilidades h3{
-    padding-top: 50px;
-    padding-bottom: 0px;
+.font-titulos{
+    font-size: 3rem;
+    font-weight: 400;
+    background: linear-gradient( 90deg, var(--backgroud-degrade));
+    -webkit-background-clip: text;
+    color: transparent
+}
+
+/*--------------- Container sobre mim  --------------------------- */
+.sobre{
+    background-color: #373739;
+}
+
+.sobre h3{
+    padding-top: 80px;
+    float: left;
+}
+
+.container-sobre{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    place-content: center;
+}
+
+.sobre-item{
+    padding:0 15px 0  0;
+    text-align: justify;
+    display: flex;
+    align-items: flex-start;
+}
+
+.sobre-item img{
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.sobre-item > article{
+    font-size: 21px;
+}
+
+/*--------------- Trabalhos futuro --------------------------- */
+.container-projeto-flex{
+    margin-left: 10%;
+    width: 80%;
+    height: auto;   
+}
+
+.container-projetos{
+    margin-top: 200px;
+    min-height: 80%;
+    width: 100%;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.titulo-projetos{
+    padding-top: 60px;
+    place-content: end;
+}
+
+.projetos-item{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+.projetos h3{
+    float: right;
+}
+
+.projetos-item img{
+    max-width: 350px;
+    height: auto;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+
+/*--------------- Skills em constante apredizado --------------------------- */
+.skills{
+        background-color: #373739;
 
 }
 
-.item-habilidades{
-    width: 350px;
-    height: 400px;
+.skills-habilidade{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    place-content: center;
+    align-items: center;
+    
+}
+
+.skills h3{
+    padding-top: 50px;
+    padding-bottom: 0px;
+    float: left;
+
+}
+
+
+.item-skills{
+    max-width: 350px;
+    min-height: 400px;
+    max-height: auto;
     place-content: center;
     border-radius: 5px;
 }
 
-.item-habilidades p{
+.item-skills p{
     margin: 15px;
     text-align: justify;
     font-size: 16px;
 }
 
-.item-habilidades h4{
+.item-skills h4{
     padding: 10px 15px;
     font-size: 32px;
 }
-.item-color1, .item-color1>div{
+
+.item-bg-azul{
     background: #0951FDFF;
 }
 
-.item-color2, .item-color2>div{
-    background: #424669ff;
+.item-color{
+    background: #212121;
+}
+
+.item-icons-branco > i{
+    color: #fff;
+}
+
+.fa{    
+    color:  #0951FDFF;
+}
+
+.fa:hove{
+ color: #00DBF9FF;
 }
 
 .item-icons{
-    margin-left: 32%;
-    margin-top: -60px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    display: flex;
-    place-content: center;
-    align-items: center;
+    margin: 10px;
 }
 
-
+/*--------------- Link para contato --------------------------- */
 .social{
     width: 100%;
     min-height: 200px;
@@ -274,7 +357,7 @@ h3{
 }
 
 /*celular */
-@media (max-width:768px){
+@media (max-width:782px){
     
     .container{
         width: 90%;
@@ -289,7 +372,7 @@ h3{
     }
 
     .saudacao h2{
-        font-size:large;
+        font-weight: 400;
     }
 
    
@@ -299,5 +382,64 @@ h3{
     
     .projetos h3{
         text-align: right;
+    }
+
+    .foto-capa > img, .capa{
+        display: none;
+    }
+
+    .saudacao{
+        width: 90%;
+        display: flex;
+        place-content: center;
+    }
+
+    .container-habilidade {
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+    }
+
+    .item-skills{
+        max-width: 400px;
+        min-height: 400px;
+        place-content: center;
+        border-radius: 5px;
+    }
+
+    .container-sobre{
+        width: 100%;
+        min-height: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        place-content: center;
+    }
+    
+    .sobre-item{
+        padding: 10px;
+    }
+    
+}
+
+
+@media (min-width:787px) and (max-width: 1024px){
+
+    .container{
+        margin-left: 5%;
+        width: 90%;
+        height: 100%;
+    }
+   
+    
+
+
+}
+
+
+@media (min-width: 1990px){
+    .container{
+        margin-left: 15%;
+        width: 70%;
+        height: 100%;
     }
 }
