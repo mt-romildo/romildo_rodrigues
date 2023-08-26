@@ -16,26 +16,35 @@
         <header>
             <div class="container">
                 <nav class="menu">
-                    <a href="#" class="logo-menu"><img draggable="false" src="rr.imagens/logo.svg"><a>
-                    <div class="item-menu">
-                        <a href="#inicio">Início</a>
-                        <a href="#sobre">Sobre</a>
-                        <a href="#projetos">Projetos</a>
-                        <a href="#skills">Skills</a>
-                        <a href="#contato">Contatos</a>
+                    <a href="#" class="logo-menu"><img draggable="false" src="rr.imagens/logo.svg"></a>
+                    <div class="item-menu" id="menuToggle">
+                        <ul id="menu">
+                            <li><a href="#sobre">Sobre mim</a></li>
+                            <li><li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                        <li><i class="fa fa-moon-o" aria-hidden="true" id="dark"></i></li>
+                        <li><i class="fa fa-sun-o" aria-hidden="true"id="light"></i></li>
+                        <li><i class="fa fa-list-ul fa-2x" aria-hidden="true"></i></li>
                     </div>
                 </nav>
         </header>
-        <mai class="background-ponto">
+        <main class="background-ponto">
             <Section class="background-preto container-tela">
                 <div class="container container-eu">
                     <div class="saudacao">
                         <div>
                             <p><a>Olá!</a></p>
                             <p><a>Eu sou o</a></p>
-                            <h1><a>Romildo<br>Rodrigues</a></h1>
+                            <h1><a>Romildo Rodrigues</a></h1>
                             <h2><a>Desenvolvedor Front-end</a></h2>
                             <a href="#" class="button">Site exclusivo para você</b></a>
+                            <div class="links-proficional">
+                                <a href="#" target="_blank"><i class="fa fa-linkedin-square fa-2x" ></i></a>
+                                <a href="#" target="_blank"><i class="fa fa-github fa-2x"></i></a>
+                                <a href="#" target="_blank"><i class="fa fa-instagram fa-2x"></i></a>
+                            </div>
                         </div>
                     </div>
                     <div class="capa">
@@ -46,17 +55,20 @@
                     </div>
                 </div>
             </Section>
-            <Section class="sobre container-tela" id="sobre">
+            <Section class="sobre container-tela-flex" id="sobre">
                 <div class="container">
                     <h3 class="font-titulos">Sobre min</h3>
                     <div class=" container-sobre">
                         <div class="sobre-item">
-                            <figure>
-                                <img draggable="false" src="rr.imagens/sobre.png" alt="">
-                            </figure>
+                            <div>
+                                <figure>
+                                    <img draggable="false" src="rr.imagens/sobre.png" alt="">
+                                </figure>
+                            </div>
                         </div>
                         <div class="sobre-item">
                             <article>
+                                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
                                 <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
                             </article>
                         </div>
@@ -118,16 +130,9 @@
                     </div>
                 </div>
             </Section>
-        </mai>
+        </main>
         <footer>
-            <div class="container" id="contato">
-                <div class="social">
-                    <a href="#"><i class="fa fa-instagram fa-4x"></i></a>
-                    <a href="#"><i class="fa fa-linkedin fa-4x" ></i></a>
-                    <a href="#"><i class="fa fa-github fa-4x"></i></a>
-                </div>                
-            </div>
-            <div class="ass">
+            <div class="footer">
                 <p>Por: Romildo Rodrigues</p>
             </div>
         </footer>

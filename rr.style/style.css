@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
@@ -40,6 +41,18 @@ body{
     min-height: 100vh;
 }
 
+/*Aimação Slide      */
+  @keyframes slide{
+    from {
+      margin-left: 100%;
+      width: 400%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 
 /* ------------------------------ Menu ---------------------------- */
@@ -52,25 +65,45 @@ header{
     height: 80px;
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;
+}
+
+.item-menu ul, li{
+    display: inline;
 }
 
 .item-menu a{
-    padding: 0.3rem 1.3rem;
+    padding: 0.3rem 0.9rem;
     color: #fff;
+}
+
+.item-menu i{
+    padding: 0.3rem 0.6rem;
+    color: #0951FDFF;
+    border: solid 1px #0951FDFF;
+    border-radius: 5px;
+    background-color: #FFF;
+
 }
 
 .item-menu a:hover{
     border-bottom: solid 3px #0951FDFF;    
 }
 
+.item-menu i:hover{
+    color: #FFF;
+    background-color: #0951FDFF;
+    border-radius: 5px;    
+}
 
 .logo-menu img{
     width: 70px;
     height: auto;
 }
 
-
+.fa-list-ul{
+    margin-left: 15px;
+}
 /* ---------------- Header - Saudação, Pimeira tela ---------------- */
 .container-eu{
     display: flex;
@@ -89,11 +122,11 @@ header{
 }
 .saudacao div{
     place-items: center;
+    place-content: center;
 }
 
 .saudacao h2{
-    padding-top: 10px;
-    padding-bottom: 100px;
+    margin:5px 50px 50px 0px;
     font-weight: 300;
     font-size: 21px;
     letter-spacing: 5px;
@@ -112,6 +145,35 @@ header{
     letter-spacing: 3px;
 }
 
+.saudacao a{
+    justify-content: center;
+}
+.links-proficional{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 60px 0px;
+}
+
+.links-proficional i{
+    padding: 0px 10px;
+    color: #fff;
+}
+
+.fa-linkedin-square:hover{
+    color: #0951FDFF;
+}
+
+.fa-github:hover{
+    color: #373739;
+}
+
+.fa-instagram:hover{
+    background: -webkit-linear-gradient(#E4Af30FF, #c12c83ff, #5734C4FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 /* ----------------  Bontão ---------------- */
 .button {
     text-decoration: none;
@@ -122,6 +184,7 @@ header{
     letter-spacing: 1px;
     background: #fff;
     color: #0951FDFF;
+    text-align: center;
 }
 
 .button:hover{
@@ -146,7 +209,6 @@ header{
     height: 70%;
     width: auto;
     display: flex;
-    margin-inline-end: 3%;
     align-items: center;
     justify-content: flex-end;
     
@@ -160,6 +222,9 @@ header{
     width: 100%;
     height: auto;
     z-index: -1;
+    animation-name: slide;
+    animation-duration: 2s;
+    justify-content: first baseline;
 }
 
 /* ---------------------------- Gradient texto ---------------------------- */
@@ -170,6 +235,7 @@ h1{
     background: linear-gradient( 90deg, var(--backgroud-degrade));
     -webkit-background-clip: text;
     color: transparent;
+    word-break: normal;
     
 }
 
@@ -206,16 +272,31 @@ h1{
     display: flex;
     align-items: flex-start;
 }
+.sobre-item > figure{
+    width: 50%;
+    height: 140%;
+    background: linear-gradient( 90deg, var(--backgroud-degrade));
+    border-radius: 15px 0px 0px 15px;
+}
 
 .sobre-item img{
+    margin: 10px;
     max-width: 300px;
     border-radius: 10px;
 }
 
+background-preto{
+    background: red;
+    padding: 0 10% 10% 0;
+}
 .sobre-item > article{
     font-size: 21px;
+    padding: 0px 40px;
 }
 
+article > p{
+    padding: 8px 0px;
+}
 /*--------------- Trabalhos futuro --------------------------- */
 .container-projeto-flex{
     margin-left: 10%;
@@ -267,7 +348,7 @@ h1{
 
 .skills-habilidade{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     display: flex;
     place-content: center;
     align-items: center;
@@ -288,12 +369,13 @@ h1{
     max-height: auto;
     place-content: center;
     border-radius: 5px;
+    margin: 10px;
 }
 
 .item-skills p{
     margin: 15px;
     text-align: justify;
-    font-size: 16px;
+    font-size: 21px;
 }
 
 .item-skills h4{
@@ -325,20 +407,6 @@ h1{
     margin: 10px;
 }
 
-/*--------------- Link para contato --------------------------- */
-.social{
-    width: 100%;
-    min-height: 200px;
-    display: flex;
-    place-content: center;
-    align-items: center;
-}
-
-.social a{
-    padding: 15px;
-    color: #fff;
-}
-
 .social a:hove{
     padding: 15px;
     background: -webkit-linear-gradient(to right, var(--backgroud-degrade));
@@ -348,7 +416,7 @@ h1{
 }
 
 
-.ass{
+.footer{
     width: 100%;
     height: 35px;
     background-image: linear-gradient(to right, var(--backgroud-degrade));
@@ -363,7 +431,43 @@ h1{
         width: 90%;
         margin-left: 5%;
         margin-right: auto;
-    } 
+    }
+
+    #menu-desktop{
+        display: none;
+    }
+
+    .item-menu{
+        width: auto;
+        height: 80px;
+        display: flex;
+        place-content:center;
+        align-items: center;
+    }
+
+    #mobile-button{
+        display: block ;
+        height: 100%;
+    }
+
+    #menu-mobile{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        background: #e7e7e7;
+        transition: 0.6s;
+        z-index: 1000;
+        height: 0px;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    ul.active #mobile-menu{
+        display: flex;
+    }
+
     .saudacao p:nth-child(1){
         font-size: 4.2em;
     }
@@ -419,9 +523,17 @@ h1{
         padding: 10px;
     }
     
+    .sobre-item > figure{
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .btn-dark{
+        height: 100%;
+    }
 }
 
-
+/* css mobile*/
 @media (min-width:787px) and (max-width: 1024px){
 
     .container{
@@ -429,9 +541,7 @@ h1{
         width: 90%;
         height: 100%;
     }
-   
     
-
 
 }
 
